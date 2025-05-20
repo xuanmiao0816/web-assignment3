@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natalee Hudson | Massage & Wellness</title>
+  <link rel="stylesheet" href="webass3.css"> 
+  <link rel="stylesheet" href="corestyle.css">
+  <script src="webass3.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="short icon" href="111111111.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- ============================================ -->
+<!--                 popup window                   -->
+<!-- ============================================ -->
+<div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to Natalee Hudson Massage & Wellness</h2>
+      <p>Let us help you release stress and restore harmony to your body and mind.</p>
+      <button id="enterBtn">Explore Now</button>
+    </div>
+  </div>  
+  
+
+
+  <!-- navigation -->
+  <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+            <img src="logo.png" alt="logo" width="250" height="50" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">Home</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            About
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Services
+                            <img class="cs-drop-icon" src="icons8-down-30.png" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Intuitive Massage</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Healing</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Massage Therapy</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Book Now
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="cs-contact-group">
+            <a href="tel:+61 0409 600 479" class="cs-phone">
+                <img class="cs-phone-icon" src="icons8-phone-50.png" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                +61 0409 600 479
+            </a>
+            <div class="cs-social">
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+                                
+         
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-229">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <h1 class="cs-title">Heal Your Mind</h1>
+            <h1 class="cs-title">Body and Soul</h1>
+            <p class="cs-text">
+                Where stress melts away, and tranquility begins.<br>Experience massage therapy tailored to <br>restore balance and well-being.
+            </p>
+            <div class="cs-button-group">
+                <a href="" class="cs-button-solid cs-button">Explore More</a>
+                <a href="" class="cs-button-transparent cs-button">
+                    <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17" height="17">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <img loading="lazy" decoding="async" src="mainIMG.jpg" alt="your background image" width="1920" height="1080" aria-hidden="true">
+    </picture>
+</section>
+                                
+
+  
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">We’re Dedicated to Providing<br> Exceptional Care and Healing</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Intuitive Massage</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="spa-4674346_1280.jpg">
+                    <source media="(min-width: 601px)" srcset="spa-4674346_1280.jpg">
+                    <img decoding="async" src="spa-4674346_1280.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Holistic Mind, Body</span> and Soul Healing</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="wellness-285590_1280.jpg">
+                    <source media="(min-width: 601px)" srcset="wellness-285590_1280.jpg">
+                    <img decoding="async" src="wellness-285590_1280.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Reiki Healing</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="wellness-285588_1280.jpg">
+                    <source media="(min-width: 601px)" srcset="wellness-285588_1280.jpg">
+                    <img decoding="async" src="wellness-285588_1280.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Massage Therapy</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="wellness-285589_1280.jpg">
+                    <source media="(min-width: 601px)" srcset="wellness-285589_1280.jpg">
+                    <img decoding="async" src="wellness-285589_1280.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+  
+
+
+  
+  
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1088">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Happy Customer Feedback<br> About Our Service</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-image" src="avatar1.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="cs-icon" src="icons8-quote-50.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="cs-item-text">
+                    “I’ve had massages before, but nothing compares to the experience Natalee offers. She has a calm and grounding energy 
+                    that puts you at ease immediately. After just one session, I felt completely recharged — both physically and emotionally.”
+                </p>
+                <div class="cs-flex">
+                    <span class="cs-name">Emily R.</span>
+                    <span class="cs-desc">Jan 2024</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-image" src="avatar2.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="cs-icon" src="icons8-quote-50.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="cs-item-text">
+                    “Natalee is warm, professional, and incredibly gifted. She made me feel safe and completely relaxed. 
+                    It’s more than just a massage — it’s like a wellness ritual I didn’t know I needed. I can’t wait for my next appointment.”
+                </p>
+                <div class="cs-flex">
+                    <span class="cs-name">Sarah T.</span>
+                    <span class="cs-desc">May 2024</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-image" src="avatar3.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="cs-icon" src="icons8-quote-50.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="cs-item-text">
+                    “As someone with a physically demanding job, I often struggle with tight muscles and fatigue. 
+                    Natalee’s massage was exactly what I needed. Her technique is firm yet soothing, and she really listens to your body. Highly recommended.”
+                </p>
+                <div class="cs-flex">
+                    <span class="cs-name">Daniel S. </span>
+                    <span class="cs-desc">Jul 2024</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+    
+
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+<section id="faq" class="cs-section">
+    <div class="cs-container">
+      <h2 class="cs-title">Frequently Asked <br>Questions</h2>
+      
+      <div class="faq-item">
+        <button class="faq-question">How do I book an appointment?</button>
+        <div class="faq-answer">
+          You can book online using our booking form, or call us directly at (03) 1234 5678.
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">What should I bring to my session?</button>
+        <div class="faq-answer">
+          Just yourself! Comfortable clothing is recommended, and we provide all necessary towels and materials.
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">Do you offer private health insurance rebates?</button>
+        <div class="faq-answer">
+          Yes, we offer HICAPS on-site. Please check with your insurer regarding coverage.
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+
+
+
+<!-- ============================================ -->
+<!--             why choose us                    -->
+<!-- ============================================ -->
+<section id="why-choose-us" class="cs-section">
+    <div class="cs-container">
+      <h2 class="cs-title">Why Choose Us</h2>
+      <div class="cs-grid-2">
+        
+        <!-- Feature 1 -->
+        <div class="cs-feature-card">
+          <h3>Certified Therapists</h3>
+          <p>All of our staff are certified <br>professionals with years of experience.</p>
+          <div class="cs-more-text">
+            Each of our therapists holds recognized qualifications and has undergone rigorous training.
+            We carefully select team members who specialize in a range of therapeutic techniques,
+            from remedial massage to holistic healing.
+          </div>
+          <button class="cs-read-more">Read More</button>
+        </div>
+  
+        <!-- Feature 2 -->
+        <div class="cs-feature-card">
+          <h3>Natural Ingredients</h3>
+          <p>We use only natural oils and <br>eco–friendly products in our treatments.</p>
+          <div class="cs-more-text">
+            Our commitment to wellness includes choosing products that are kind to both your body and the environment.
+            We use 100% plant-based oils, cruelty-free formulations, and avoid harsh chemicals for safe and sustainable care.
+          </div>
+          <button class="cs-read-more">Read More</button>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+<!--               back to tpo                    -->
+<!-- ============================================ -->
+<img src="icons8-up-squared-50.png" id="backToTop" alt="Back to Top" />
+
+
+
+
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-308">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="logo2.png" alt="logo" width="178" height="32">
+            </a>
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Sitemap</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">About</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Services</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Portfolio</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Contact</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Categories</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Business Law</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Education Law</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Insurance Defense</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Family Law</a>
+            </li>
+        </ul>
+        <!-- Contact Info -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Contact</span>
+            </li>
+            <li class="cs-nav-li">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg" alt="phone" width="24" height="24">
+                <a class="cs-nav-link cs-phone" href="tel: 123-456-7890">+61 0409 600 479</a>
+            </li>
+            <li class="cs-nav-li">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg" alt="email" width="24" height="24">
+                <a class="cs-nav-link cs-email" href="mailto:info@codestitch.com">contact@nataleehudson.com</a>
+            </li>
+            <li class="cs-nav-li">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg" alt="pin" width="24" height="24">
+                <a class="cs-nav-link cs-address" href="" target="_blank" rel="noopener">
+                    181 Carolyn Way<br> Maiden Gully VIC 3551
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-copyright">© Copyright 2022 - <a class="cs-copyright-link" href="">Stitch Law Design</a></span>
+    </div>
+</footer>
+
+
+<!-- Booking Popup -->
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-modal-content">
+      <span id="closeBooking" class="close-btn">&times;</span>
+      <h2>Book a Session</h2>
+      <form id="bookingForm">
+        <label for="service">Select a Service</label>
+        <select id="service" required>
+          <option value="">Please choose</option>
+          <option value="relaxation">Intuitive Massage</option>
+          <option value="healing">Holistic Mind, Body and Soul Healing</option>
+          <option value="reiki">Reiki Healing</option>
+          <option value="reiki">Massage Therapy</option>
+        </select>
+  
+        <label for="date">Choose a Date</label>
+        <input type="date" id="date" lang="en">
+  
+        <button type="submit" id="confirmBooking">Confirm</button>
+        <p id="bookingSuccessMsg" style="color: green; margin-top: 1rem; display: none;">Booking confirmed!</p>
+      </form>
+    </div>
+  </div>  
+  
+  
+  
+                                
+  <!--  -->
+<!--popup window-->
+    <script>
+    const modal = document.getElementById("welcomeModal");
+    const btn = document.getElementById("enterBtn");
+  
+    btn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  </script>
+
+<!--back to top-->
+<script>
+    const backToTopBtn = document.getElementById("backToTop");
+  
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+  
+    backToTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+  
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      if (scrollPos > 50) {
+        document.body.classList.add('scroll');
+      } else {
+        document.body.classList.remove('scroll');
+      }
+    });
+  </script>
+
+<!--why choose us-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".cs-read-more").forEach(button => {
+        button.addEventListener("click", () => {
+          const moreText = button.previousElementSibling;
+          moreText.classList.toggle("visible");
+          button.textContent = moreText.classList.contains("visible") ? "close" : "Read More";
+        });
+      });
+    });
+  </script>
+  
+<!--FAQ-->
+  <script>
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const answer = button.nextElementSibling;
+        answer.classList.toggle("visible");
+      });
+    });
+  </script>
+  
+
+  <script src=" Assignment3.js"></script> 
+</body>
+</html>
